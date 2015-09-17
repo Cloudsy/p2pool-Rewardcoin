@@ -3,7 +3,9 @@ from distutils.core import setup, Extension
 Rewardcoin_momentum_module = Extension('Rewardcoin_momentum',
                                libraries = ['ssl', 'crypto'],
                                sources = ['momentummodule.c',
-                                          'momentum.c'],
+                                          'groestl.c',
+                                          'keccak.c',
+                                          'momentum.cpp'],
                                include_dirs=['.'])
 
 setup (name = 'Rewardcoin_momentum',
