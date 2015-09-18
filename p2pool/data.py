@@ -8,7 +8,7 @@ import time
 
 from twisted.python import log
 
-import Rewardcoin_momentum
+import rewardcoin_momentum
 
 import p2pool
 from p2pool.bitcoin import data as bitcoin_data, script, sha256
@@ -296,7 +296,7 @@ class Share(object):
             from p2pool import p2p
             raise p2p.PeerMisbehavingError('share PoW invalid')
         if not skip_momentum:
-            if Rewardcoin_momentum.checkMomentum(midhash, self.header['birthdayA'], self.header['birthdayB']) == False:
+            if rewardcoin_momentum.checkMomentum(midhash, self.header['birthdayA'], self.header['birthdayB']) == False:
                 from p2pool import p2p
                 raise p2p.PeerMisbehavingError('share momentum invalid')
         

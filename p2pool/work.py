@@ -8,7 +8,7 @@ import time
 
 import hashlib
 
-import Rewardcoin_momentum
+import rewardcoin_momentum
 
 from twisted.internet import defer
 from twisted.python import log
@@ -369,7 +369,7 @@ class WorkerBridge(worker_interface.WorkerBridge):
             #print 'MIDHASH: {0}'.format(midhash.encode('hex'))
             #print 'A: {0}'.format(header['birthdayA'])
             #print 'B: {0}'.format(header['birthdayB'])
-            momentumc = Rewardcoin_momentum.checkMomentum(midhash, header['birthdayA'], header['birthdayB'])
+            momentumc = rewardcoin_momentum.checkMomentum(midhash, header['birthdayA'], header['birthdayB'])
             #print momentumc
             if momentumc == False:
                 print 'Invalid Momentum from Client!'

@@ -12,9 +12,9 @@ import traceback
 import urlparse
 
 try:
-    import Rewardcoin_momentum
+    import rewardcoin_momentum
 except ImportError:
-    sys.exit("Error: Rewardcoin Momentum checking is not installed. Simply enter the Rewardcoin_momentum directory and try 'sudo python setup.py build'")
+    sys.exit("Error: Rewardcoin Momentum checking is not installed. Simply enter the rewardcoin_momentum directory and try 'sudo python setup.py build'")
 
 if '--iocp' in sys.argv:
     from twisted.internet import iocpreactor
@@ -370,8 +370,8 @@ def run():
     parser = fixargparse.FixedArgumentParser(description='p2pool (version %s)' % (p2pool.__version__,), fromfile_prefix_chars='@')
     parser.add_argument('--version', action='version', version=p2pool.__version__)
     parser.add_argument('--net',
-        help='use specified network (default: Rewardcoin)',
-        action='store', choices=sorted(realnets), default='Rewardcoin', dest='net_name')
+        help='use specified network (default: rewardcoin)',
+        action='store', choices=sorted(realnets), default='rewardcoin', dest='net_name')
     parser.add_argument('--testnet',
         help='''use the network's testnet''',
         action='store_const', const=True, default=False, dest='testnet')
