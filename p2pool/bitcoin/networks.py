@@ -33,7 +33,7 @@ nets = dict(
         BLOCK_EXPLORER_URL_PREFIX='http://rdcexplorer.info/?query=',
         ADDRESS_EXPLORER_URL_PREFIX='http://rdcexplorer.info/?query=',
         TX_EXPLORER_URL_PREFIX='http://rdcexplorer.info/?query=',
-        SANE_TARGET_RANGE=(2**256//4096 - 1, 2**256//2**8 - 1),
+        SANE_TARGET_RANGE=(2**256//4096 - 1, 2**256//2**3 - 1),
         DUMB_SCRYPT_DIFF=1,
         DUST_THRESHOLD=1e8,
     ),
